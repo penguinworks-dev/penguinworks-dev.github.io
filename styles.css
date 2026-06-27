@@ -235,7 +235,7 @@ nav a:hover {
 
 .hero-sub {
 
-    font-size: 2rem;
+    font-size: clamp(2rem, 5vw, 3rem);
 
     font-weight: 700;
 
