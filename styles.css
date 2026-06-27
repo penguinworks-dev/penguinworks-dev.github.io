@@ -572,16 +572,9 @@ nav {
 
     background: rgba(255,255,255,.95);
 
-    position: fixed;
-    top: 78px;
-    left: 0;
-    right: 0;
-
     padding: 16px 0;
 
     border-bottom: 1px solid rgba(0,0,0,.08);
-
-    z-index: 999;
 }
 
 nav a {
