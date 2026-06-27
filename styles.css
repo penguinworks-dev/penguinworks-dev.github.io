@@ -55,7 +55,13 @@ header {
     backdrop-filter: blur(10px);
     background: rgba(255,255,255,.85);
     border-bottom: 1px solid rgba(0,0,0,.05);
-    transition: top 0.3s ease-in-out; 
+    /* 修正: top ではなく transform でアニメーションさせます */
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* 追加: ヘッダーを上に隠すためのクラス */
+.header-hidden {
+    transform: translateY(-100%);
 }
 
 .nav {
@@ -117,7 +123,7 @@ nav a.active::after {
 ========================== */
 .hero {
     position: relative;
-    padding: 90px 0 140px;
+    padding: 90px 0 40px;
     overflow: hidden;
 }
 
