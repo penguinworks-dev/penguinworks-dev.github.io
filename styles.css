@@ -32,7 +32,6 @@ html {
 }
 
 body {
-
     font-family:
         "Segoe UI",
         "Yu Gothic UI",
@@ -562,31 +561,59 @@ footer {
    Mobile
 ========================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
 
-    .hero-grid,
-    .penguin-card {
-
-        grid-template-columns: 1fr;
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
     }
 
-    .feature-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
+    nav a {
+        padding: 10px 24px;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(0,0,0,.05);
     }
 
-    .screenshot-grid {
+    main {
+        padding-top: 180px;  ← これを追加
+    }
 
-        grid-template-columns: 1fr;
+    .hero {
+        padding-top: 50px;
     }
 }
 
 @media (max-width: 768px) {
 
     nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        background: rgba(255,255,255,.95);
+        position: fixed;
+        top: 78px;
+        left: 0;
+        right: 0;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(0,0,0,.08);
+        z-index: 999;
+    }
 
-        display: none;
+    nav a {
+        padding: 10px 24px;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding-top: 140px;  /* ナビの高さ分だけ下げる */
     }
 
     .hero {
