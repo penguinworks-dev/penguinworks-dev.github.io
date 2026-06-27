@@ -749,3 +749,106 @@ nav a.active::after {
   margin-top: 0.5rem;              /* 上のテキストとの隙間 */
   margin-bottom: 0.5rem;           /* 下のテキストとの隙間 */
 }
+
+/* ==========================
+   追加: index.html用のキャッチコピー
+========================== */
+.hero-catch {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    color: #123b76;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* ==========================
+   修正: Mobile (メディアクエリ内)
+========================== */
+@media (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding-top: 10px; /* スマホ時の上部余白を調整 */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        background: transparent; /* 親のheaderに背景があるため不要 */
+        padding: 10px 0;
+        border-bottom: none;
+    }
+
+    nav a {
+        display: block; /* 追加: aタグをブロック要素にして幅を確実にとる */
+        width: 100%;
+        text-align: center;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(0,0,0,.05);
+    }
+    
+    /* 追加: スマホ時はデザイン崩れを防ぐため下線を非表示 */
+    nav a.active::after {
+        display: none; 
+    }
+
+    main {
+        /* 180pxだとスマホで空きすぎるため修正 */
+        padding-top: 40px; 
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-sub {
+        font-size: 1.4rem;
+    }
+
+    .feature-grid,
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .store-buttons {
+        flex-direction: column;
+    }
+
+    .penguin-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .penguin-card img {
+        margin: 0 auto;
+    }
+
+    .floating-folder,
+    .floating-note {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
