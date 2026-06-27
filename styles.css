@@ -67,6 +67,7 @@ body {
 ========================== */
 
 header {
+    margin-top: 24px;
 
     position: sticky;
 
