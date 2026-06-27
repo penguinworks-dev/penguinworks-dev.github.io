@@ -563,6 +563,12 @@ Mobile
 
 @media (max-width: 768px) {
 
+.nav {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+}
+
 
 nav {
     display: flex;
