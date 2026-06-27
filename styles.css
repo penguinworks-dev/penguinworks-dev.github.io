@@ -26,10 +26,15 @@ html {
 body {
     font-family: "Segoe UI", "Yu Gothic UI", sans-serif;
     color: var(--text);
+    
+    /* ↓ 背景のグラデーション（一番上が薄い青 #e0f2ff） */
     background: linear-gradient(to bottom, #e0f2ff 0%, #f7fbff 350px, #ffffff 900px);
+    
     line-height: 1.7;
     overflow-x: hidden;
-    padding-top: 27px; /* 修正: <br>に代わる上部余白 */
+    
+    /* ↓ ここが上部の青い余白の「幅（高さ）」です！ */
+    padding-top: 10px; 
 }
 
 /* ==========================
