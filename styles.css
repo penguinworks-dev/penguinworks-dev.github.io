@@ -224,7 +224,7 @@ nav a:hover {
 
 .hero h1 {
 
-    font-size: 5rem;
+    font-size: clamp(2.8rem, 6vw, 4rem);
 
     line-height: 1.05;
 
@@ -558,101 +558,95 @@ footer {
 }
 
 /* ==========================
-   Mobile
+Mobile
 ========================== */
 
 @media (max-width: 768px) {
 
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        width: 100%;
-    }
 
-    nav a {
-        padding: 10px 24px;
-        width: 100%;
-        text-align: center;
-        font-size: 1rem;
-        border-bottom: 1px solid rgba(0,0,0,.05);
-    }
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 
-    main {
-        padding-top: 180px;  ← これを追加
-    }
+    background: rgba(255,255,255,.95);
 
-    .hero {
-        padding-top: 50px;
-    }
+    position: fixed;
+    top: 78px;
+    left: 0;
+    right: 0;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid rgba(0,0,0,.08);
+
+    z-index: 999;
 }
 
-@media (max-width: 768px) {
+nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
 
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        background: rgba(255,255,255,.95);
-        position: fixed;
-        top: 78px;
-        left: 0;
-        right: 0;
-        padding: 16px 0;
-        border-bottom: 1px solid rgba(0,0,0,.08);
-        z-index: 999;
-    }
+main {
+    padding-top: 180px;
+}
 
-    nav a {
-        padding: 10px 24px;
-        width: 100%;
-        text-align: center;
-        font-size: 1rem;
-    }
+.hero {
+    padding-top: 50px;
+}
 
-    .hero {
-        padding-top: 140px;  /* ナビの高さ分だけ下げる */
-    }
+.hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
 
-    .hero {
+.hero h1 {
+    font-size: 3rem;
+}
 
-        padding-top: 50px;
-    }
+.hero-sub {
+    font-size: 1.4rem;
+}
 
-    .hero h1 {
+.feature-grid {
+    grid-template-columns: 1fr;
+}
 
-        font-size: 3rem;
-    }
+.screenshot-grid {
+    grid-template-columns: 1fr;
+}
 
-    .hero-sub {
+.store-buttons {
+    flex-direction: column;
+}
 
-        font-size: 1.4rem;
-    }
+.penguin-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    overflow: hidden;
+}
 
-    .feature-grid {
+.penguin-card img {
+    margin: 0 auto;
+}
 
-        grid-template-columns: 1fr;
-    }
+.floating-folder,
+.floating-note {
+    display: none;
+}
 
-    .store-buttons {
+.footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
 
-        flex-direction: column;
-    }
 
-    .floating-phone,
-    .floating-note {
-
-        display: none;
-    }
-
-    .footer-content {
-
-        flex-direction: column;
-
-        gap: 15px;
-    }
 }
 
 /* ==========================
