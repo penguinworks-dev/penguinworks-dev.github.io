@@ -1,6 +1,6 @@
 /* =====================================
    DriveNote Official Website
-   styles.css
+   styles.css (完全統合版)
 ===================================== */
 
 * {
@@ -26,14 +26,11 @@ html {
 body {
     font-family: "Segoe UI", "Yu Gothic UI", sans-serif;
     color: var(--text);
-    
-    /* ↓ 背景のグラデーション（一番上が薄い青 #e0f2ff） */
     background: linear-gradient(to bottom, #e0f2ff 0%, #f7fbff 350px, #ffffff 900px);
-    
     line-height: 1.7;
     overflow-x: hidden;
     
-    /* ↓ ここが上部の青い余白の「幅（高さ）」です！ */
+    /* 復元: 画面上部の青い余白（10px） */
     padding-top: 10px; 
 }
 
@@ -55,11 +52,12 @@ header {
     backdrop-filter: blur(10px);
     background: rgba(255,255,255,.85);
     border-bottom: 1px solid rgba(0,0,0,.05);
-    /* 修正: top ではなく transform でアニメーションさせます */
+    
+    /* 修正: スクロール時の滑らかなアニメーション */
     transition: transform 0.3s ease-in-out; 
 }
 
-/* 追加: ヘッダーを上に隠すためのクラス */
+/* スクロール時にJSから付与される隠しクラス */
 .header-hidden {
     transform: translateY(-100%);
 }
@@ -123,7 +121,8 @@ nav a.active::after {
 ========================== */
 .hero {
     position: relative;
-    padding: 90px 0 40px;
+    /* 修正: 文字の上の余白を詰めてスタイリッシュに（上が40px） */
+    padding: 40px 0 140px; 
     overflow: hidden;
 }
 
@@ -174,7 +173,6 @@ nav a.active::after {
     margin-bottom: 10px;
 }
 
-/* 追加: index.html用のキャッチコピー */
 .hero-catch {
     font-size: clamp(1.6rem, 5vw, 2.2rem);
     color: #123b76;
@@ -449,11 +447,11 @@ footer {
 }
 
 /* ==========================
-   Mobile (修正版)
+   Mobile
 ========================== */
 @media (max-width: 768px) {
     body {
-        padding-top: 0; /* スマホ時は上部余白をなくす */
+        padding-top: 0; /* スマホ時は画面を広く使うため上部の青い余白を消す */
     }
 
     .nav {
@@ -475,7 +473,7 @@ footer {
     }
 
     nav a {
-        display: block; /* 修正: 幅を100%にするためブロック要素化 */
+        display: block;
         width: 100%;
         text-align: center;
         padding: 12px 24px;
@@ -484,11 +482,11 @@ footer {
     }
     
     nav a.active::after {
-        display: none; /* スマホ時は下線装飾を非表示 */
+        display: none;
     }
 
     main {
-        padding-top: 20px; 
+        padding-top: 10px; 
     }
 
     .hero {
