@@ -182,7 +182,7 @@ nav a.active::after {
 }
 
 .hero-sub {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
     font-weight: 700;
     color: var(--primary);
     margin-bottom: 20px;
