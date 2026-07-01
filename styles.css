@@ -127,7 +127,7 @@ nav a.active::after {
 }
 
 .page-hero h1 {
-	font-size: 2rem; /* お好みで1.8rem〜2.2remくらいで調整 */
+	font-size: 1.6rem; /* お好みで1.8rem〜2.2remくらいで調整 */
 }
 
 /* 雲風 */
