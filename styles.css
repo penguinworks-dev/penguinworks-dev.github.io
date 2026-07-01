@@ -126,10 +126,6 @@ nav a.active::after {
     overflow: hidden;
 }
 
-.page-hero h1 {
-	font-size: 1rem; /* お好みで1.8rem〜2.2remくらいで調整 */
-}
-
 /* 雲風 */
 .hero::before {
     content: "";
@@ -377,7 +373,7 @@ section h2 {
 }
 
 .page-hero h1 {
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: #123b76;
     margin-bottom: 15px;
 }
