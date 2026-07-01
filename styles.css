@@ -126,6 +126,10 @@ nav a.active::after {
     overflow: hidden;
 }
 
+.page-hero h1 {
+	font-size: 2rem; /* お好みで1.8rem〜2.2remくらいで調整 */
+}
+
 /* 雲風 */
 .hero::before {
     content: "";
@@ -422,6 +426,62 @@ section h2 {
     font-size: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+/* ==========================
+   Privacy Policy Blocks
+========================== */
+.content-card {
+    margin-bottom: 24px;
+}
+
+.content-card h2 {
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.content-card ul li {
+    margin-bottom: 8px;
+}
+
+.highlight-box {
+    background: #eff6ff;
+    border-left: 4px solid var(--primary);
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+    margin: 16px 0;
+}
+
+.highlight-box p {
+    color: var(--primary);
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-info {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 12px;
+}
+
+.contact-info p {
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.contact-info a.btn-primary {
+    color: white;
 }
 
 /* ==========================
