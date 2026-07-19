@@ -593,3 +593,106 @@ footer {
         text-align: center;
     }
 }
+
+/* ===================================================
+   DriveNote Manual Page Specific Styles (完全統合)
+   =================================================== */
+.toc-card {
+    background-color: #f8fafc;
+    border-left: 4px solid var(--primary);
+}
+.toc-list {
+    list-style: none;
+    padding-left: 0 !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+.toc-list a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.toc-list a:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+.manual-section {
+    margin-bottom: 10px;
+}
+.manual-section h3 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    color: #123b76;
+    border-left: 3px solid var(--primary-light);
+    padding-left: 10px;
+}
+.custom-table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+.manual-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    min-width: 500px;
+}
+.manual-table th, .manual-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #cbd5e1;
+}
+.manual-table th {
+    background-color: #f1f5f9;
+    color: var(--text);
+    font-weight: 700;
+    border-bottom: 2px solid #cbd5e1;
+}
+.manual-table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+.manual-table tr:last-child td {
+    border-bottom: none;
+}
+.code-inline {
+    background-color: #f1f5f9;
+    color: #e11d48;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.9em;
+}
+.list-styled {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+.list-styled li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+.warning-details {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+.warning-details ul {
+    list-style-type: disc;
+}
+.warning-details ul li {
+    margin-bottom: 8px;
+}
+.warning-details ul ul {
+    padding-left: 20px;
+    margin-top: 6px;
+    list-style-type: circle;
+}
+.warning-details ul ul li {
+    margin-bottom: 4px;
+}

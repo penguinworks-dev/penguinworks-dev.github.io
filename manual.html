@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>取扱説明書 | DriveNote</title>
+    <meta name="description" content="DriveNoteの基本的な使い方、外観の変更方法、設定ファイル（.ini）を用いた上級者向けの極限カスタマイズ、および安全なデータ移行手順について。">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="index.html" class="logo">
+            <img src="images/Penguin Works LogoS.png" alt="Penguin Works Presents">
+            <span><small>Penguin Works Presents</small></span>
+        </a>
+        <nav>
+            <a href="index.html">ホーム</a>
+            <a href="about.html">Penguin Works</a>
+            <a href="manual.html" class="active">取扱説明書</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="contact.html">お問い合わせ</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <h1>DriveNote 取扱説明書</h1>
+            <p class="lead">基本操作からハッカーライクなハック設定、安全なデータ管理まで</p>
+        </div>
+    </section>
+
+    <!-- 目次セクション -->
+    <section style="padding: 20px 0;">
+        <div class="container content-card toc-card">
+            <h2>目次</h2>
+            <ul class="toc-list">
+                <li><a href="#about">1. DriveNoteについて</a></li>
+                <li><a href="#getting-started">2. はじめに（初期設定と保存先）</a></li>
+                <li><a href="#basic">3. 基本的な使い方</a></li>
+                <li><a href="#customize">4. 外観のカスタマイズ</a></li>
+                <li><a href="#advanced">5. 極限のカスタマイズ設定（上級者向け）</a></li>
+                <li><a href="#data-management">6. データの管理と安全な移行</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 本文セクション -->
+    <section style="padding: 20px 0;">
+        <div class="container">
+
+            <!-- 1. DriveNoteについて -->
+            <div id="about" class="content-card manual-section">
+                <h2>1. DriveNoteについて</h2>
+                <p class="slogan">Your Notes. Your Drive.（あなたのメモは、あなたのドライブに。）</p>
+                <p>
+                    DriveNoteは、「セキュア・明確・汎用性」を設計思想の限界まで追求したテキストメモアプリです。特定のクラウドサービスやアプリ固有のデータ形式であなたの大切なメモを「囲い込む」ことは一切しません。
+                </p>
+                <p>
+                    データはすべて普遍的な「.txt（テキストファイル）」として、あなた自身のドライブに直接保存されます。数十年後でも確実に開ける安心感と、限界まで弄れるカスタマイズ性を両立した、究極の執筆空間を提供します。
+                </p>
+            </div>
+
+            <!-- 2. はじめに -->
+            <div id="getting-started" class="content-card manual-section">
+                <h2>2. はじめに（初期設定とデータの保存先）</h2>
+                <p>
+                    初回起動時、メモの保存先は自動的にPCの<strong>「ドキュメント」フォルダ内の <span class="code-inline">DriveNote</span> フォルダ</strong>に設定されます。あなたが作成したすべてのテキストファイル（.txt）はここに保存されます。
+                </p>
+                <p>
+                    保存先を変更したい場合は、ホーム画面의 歯車アイコン（設定）から「Folder（フォルダ）」を選択し、任意のフォルダを指定してください。
+                </p>
+                <div class="highlight-box">
+                    <p>🔒 豆知識：保存先フォルダ内には、アプリの設定ファイルやアセットを管理するための "_drivenote" というシステムフォルダが自動生成されます。</p>
+                </div>
+            </div>
+
+            <!-- 3. 基本的な使い方 -->
+            <div id="basic" class="content-card manual-section">
+                <h2>3. 基本的な使い方</h2>
+                
+                <h3>■ ノートとフォルダの管理</h3>
+                <p>ホーム画面（選択画面）では、メモがカラフルな「付箋」として並びます。</p>
+                <ul class="list-styled">
+                    <li><strong>列数の変更:</strong> 設定メニューから、グリッドを1列〜4列に自由に変更できます。</li>
+                    <li><strong>並び替え:</strong> 日付（Date）、名前（Name）、色（Color）でソートが可能です。</li>
+                    <li><strong>色分け:</strong> 各付箋の「…」メニューから、パステルカラーの背景色を設定して視覚的に整理できます。</li>
+                </ul>
+
+                <h3>■ エディタの便利機能</h3>
+                <ul class="list-styled">
+                    <li><strong>しおり（Bookmark）機能:</strong> エディタ右上のしおりアイコンから、現在の位置をブックマークとして無制限に登録でき、長文でもいつでもその文脈へジャンプ可能です。</li>
+                    <li><strong>リードオンリー（閲覧）モード:</strong> 誤入力による上書きを防ぎたい場合は、上部の鉛筆アイコンをクリックして「閲覧モード」に切り替えることができます。</li>
+                    <li><strong>ジャンプパネル:</strong> 長文内の高速移動に便利なスライダーパネルを備えています。</li>
+                </ul>
+            </div>
+
+            <!-- 4. 外観のカスタマイズ -->
+            <div id="customize" class="content-card manual-section">
+                <h2>4. 外観のカスタマイズ</h2>
+                <p>エディタ内のメニュー（「：」アイコン）から、執筆空間を自分好みにデザインできます。</p>
+                <ul class="list-styled">
+                    <li><strong>壁紙の設定:</strong> 好きな画像をエディタの背景に設定できます。表示方法は「等倍（Actual）」と「画面に合わせる（Fit）」から選択可能です。</li>
+                    <li><strong>余白と文字の調整:</strong> 上下左右の余白（パディング）、フォントサイズ、文字色（黒/白）を調整し、最高に集中できる環境を構築できます。</li>
+                    <li><strong>フォントの追加:</strong> お手持ちのフォントファイル（.ttf / .otf）を読み込ませることで、エディタの文字フォントを自由に変更できます。</li>
+                </ul>
+            </div>
+
+            <!-- 5. 極限のカスタマイズ設定（上級者向け） -->
+            <div id="advanced" class="content-card manual-section">
+                <h2>5. ⚙️【上級者向け】極限のカスタマイズ設定</h2>
+                <p>
+                    DriveNoteの真骨頂はここからです。設定ファイル（.ini）を直接編集することで、アプリのUIを根本からハックすることができます。
+                </p>
+                <p>
+                    カスタマイズを行う際は、<span class="code-inline">_drivenote</span> フォルダ内に自動生成されている元の <span class="code-inline">.ini</span> ファイルをテキストエディタ等でコピー・編集し、それをアプリ内から読み込むという手順で行います。
+                </p>
+
+                <h3>■ テーマカラーの完全制御（colors.ini）</h3>
+                <p>背景、文字、ボタンなど, あらゆるUIパーツの色をHex値（例：#FFFFFF）で書き換えることができます。</p>
+                <p>
+                    <strong>【適用方法】</strong> 編集した <span class="code-inline">colors.ini</span> は、ホーム画面の設定（歯車アイコン）を開き、「Color Theme」のフォルダアイコンをクリックして読み込ませることで一括適用されます。
+                </p>
+
+                <h3>■ オリジナル言語とショートカットの作成（language.ini）</h3>
+                <p>アプリ内のすべての表示テキストやツールチップの文言、さらには<strong>キーボードショートカットキー</strong>まで、完全に自分好みの配列に変更することができます。</p>
+                <p>
+                    <strong>【適用方法】</strong> 編集した <span class="code-inline">language.ini</span> は、ホーム画面の設定（歯車アイコン）を開き、「Language」のフォルダアイコンをクリックして読み込ませることで適用されます。
+                </p>
+
+                <h3>■ カスタムアイコンの適用（icon フォルダ）</h3>
+                <p>
+                    保存先フォルダ直下に自動生成される <span class="code-inline">icon</span> フォルダ内に、特定のファイル名（PNG形式）で画像を配置するだけで、アプリ内のボタンやフォルダのアイコンをあなたの用意したオリジナル画像にすり替えることができます。
+                </p>
+
+                <div class="highlight-box">
+                    <p>⚠️ カスタムアイコン作成時の注意点</p>
+                </div>
+                <div class="warning-details">
+                    <ul>
+                        <li><strong>対応フォーマット:</strong> 透過背景を持つ <strong>PNG形式（.png）</strong>にのみ対応しています。</li>
+                        <li><strong>対応サイズ（厳守）:</strong> <strong>44 × 44 ピクセル</strong>、または <strong>48 × 48 ピクセル</strong>（縦横比1:1の正方形）
+                            <ul>
+                                <li>アプリの軽量・高速動作を維持し、予期せぬクラッシュやメモリの過剰消費を防ぐため、<strong>アイコン画像のサイズは「44×44」または「48×48」ピクセル限定</strong>となっています。</li>
+                                <li>これ以外のサイズ（長方形の画像や、高解像度の画像など）を配置した場合、アプリが正常に起動しなくなったり、表示が著しく崩れる、またはカスタム画像が無視されてデフォルトのアイコンが表示される原因になります。必ず指定の解像度にリサイズした画像を配置してください。</li>
+                            </ul>
+                        </li>
+                        <li><strong>テーマへの馴染ませ方:</strong> 画像の背景が透き通る「透過PNG（透過背景）」で作成することをお勧めします。背景を透過させておくことで、どのようなテーマ背景色にも美しく調和します。</li>
+                        <li><strong>ファイル名の命名規則:</strong> ファイル名はすべて「半角英数字」かつ「完全な小文字」で指定する必要があります。大文字が混ざっていると認識されません。</li>
+                    </ul>
+                </div>
+
+                <p>📑 <strong>カスタム対応アイコン・ファイル名一覧</strong></p>
+                <div class="custom-table-container">
+                    <table class="manual-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">分類</th>
+                                <th style="width: 35%;">指定するファイル名</th>
+                                <th style="width: 40%;">対応するボタン / 機能</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ホーム画面（選択画面）</strong></td>
+                                <td><span class="code-inline">ic_settings.png</span></td>
+                                <td>設定（歯車）ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_date.png</span></td>
+                                <td>日付・本文表示のON/OFFボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_newnote.png</span></td>
+                                <td>新規メモ（付箋）作成ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_search.png</span></td>
+                                <td>メモの絞り込み検索ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_search_close.png</span></td>
+                                <td>検索パネルを閉じるボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_sort_date.png</span></td>
+                                <td>日付順ソート中アイコン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_sort_name.png</span></td>
+                                <td>名前順ソート中アイコン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_sort_color.png</span></td>
+                                <td>色順ソート中アイコン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_folder.png</span></td>
+                                <td>フォルダ付箋用のフォルダアイコン</td>
+                            </tr>
+                            <tr>
+                                <td><strong>エディタ画面（編集画面）</strong></td>
+                                <td><span class="code-inline">ic_back.png</span></td>
+                                <td>ホームに戻る（保存して終了）ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_save.png</span></td>
+                                <td>手動保存ボタン（設定ツールバー等共通）</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_copy.png</span></td>
+                                <td>コピーボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_cut.png</span></td>
+                                <td>切り取り（カット）ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_paste.png</span></td>
+                                <td>貼り付け（ペースト）ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_undo.png</span></td>
+                                <td>元に戻す（Undo）ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_redo.png</span></td>
+                                <td>やり直し（Redo）ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_menu.png</span></td>
+                                <td>設定メニュー（：）ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_bookmark.png</span></td>
+                                <td>しおり（ブックマーク）ポップアップボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_search_next.png</span></td>
+                                <td>エディタ内「次を検索（▽）」ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_search_prev.png</span></td>
+                                <td>エディタ内「前を検索（△）」ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_replace.png</span></td>
+                                <td>エディタ内「置換（REP）」ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_jump.png</span></td>
+                                <td>ジャンプパネル（スライダー）開閉ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_jumptop.png</span></td>
+                                <td>スライダー内「最上部へ移動（TOP）」ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_jumpbottom.png</span></td>
+                                <td>スライダー内「最下部へ移動（BTM）」ボタン</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_readonly.png</span></td>
+                                <td>閲覧（リードオンリー）モード時のボタン表示</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><span class="code-inline">ic_edit.png</span></td>
+                                <td>編集モード時のボタン表示</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 6. データの管理と安全な移行 -->
+            <div id="data-management" class="content-card manual-section">
+                <h2>6. データの管理と安全な移行</h2>
+                
+                <h3>■ 別フォルダへのお引越し（マイグレーション機能）</h3>
+                <p>
+                    メモの保存先を別の場所（新しいPCのフォルダなど）に変更したい場合、設定の「Folder」から新しい場所を指定してください。
+                </p>
+                <p>
+                    その際、データ移行ダイアログが表示されます。チェックボックスを選ぶだけで、TXTファイルだけでなく、あなたがカスタマイズしたカラー設定や言語設定、画像アセットをすべて一括で安全に新フォルダへお引越し（コピー）できます。
+                </p>
+                <p>
+                    すでに移行先に別の設定が存在する場合は、既存の古い設定を完全に保護しつつ、最新のメモやサブフォルダだけを賢く差分マージする機能も搭載しています。
+                </p>
+
+                <h3>■ トラブル時の緊急リセット（EMTツール）</h3>
+                <p>（※Windows環境限定）</p>
+                <p>
+                    万が一、誤った設定などが原因でアプリが起動しなくなった場合のために、<span class="code-inline">_drivenote/tmp/EMT/</span> フォルダ内に<strong>緊急システム設定リセットツール（.batファイル）</strong>が用意されています。
+                </p>
+                <p>
+                    これを実行することで、あなたの保存したメモや付箋の色設定（_drivenote内の大切なデータ）を一切消去することなく、OS側のシステム設定情報（AppData）のみを安全に初期化し、起動を正常に復旧させることができます。
+                </p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <p>© 2026 Penguin Works</p>
+        <div>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="contact.html">お問い合わせ</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
